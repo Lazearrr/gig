@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Messages</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/messages.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo">GIG</div>
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">      
+              <!-- NAVIGATION MENUS -->
+              <div class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li class="messages">
+                  <a href="messages.html">Messages</a>
+                  <!-- DROPDOWN MENU -->
+                  <ul class="dropdown">
+                    <li><a href="/">Jon: Hey got a job for you</a></li>
+                    <li><a href="/">Marc: Available Sunday?</a></li>
+                    <li><a href="/">Seth: Need a motor fixed</a></li>
+                    <li><a href="/">Sam: Need my computer fixed</a></li>
+                    <li><a href="/">Adam: Need a boat motor worked on</a></li>
+                  </ul>
+                </li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+              </div>
+            </ul>
+          </nav>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+<a id="view-code" href="https://codepen.io/virgilpana/pen/ZYZXgP" target="_blank">VIEW CODE</a>
+
+<div id="chatbox">
+  <div id="friendslist">
+      <div id="topmenu">
+          <span class="friends"></span>
+            <span class="chats"></span>
+            <span class="history"></span>
+        </div>
+        
+        <div id="friends">
+          <div class="friend">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1_copy.jpg" />
+                <p>
+                  <strong>Miro Badev</strong>
+                  <span>mirobadev@gmail.com</span>
+                </p>
+                <div class="status available"></div>
+            </div>
+            
+            <div class="friend">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/2_copy.jpg" />
+                <p>
+                  <strong>Martin Joseph</strong>
+                  <span>marjoseph@gmail.com</span>
+                </p>
+                <div class="status away"></div>
+            </div>
+            
+            <div class="friend">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/3_copy.jpg" />
+                <p>
+                  <strong>Tomas Kennedy</strong>
+                  <span>tomaskennedy@gmail.com</span>
+                </p>
+                <div class="status inactive"></div>
+            </div>
+            
+            <div class="friend">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/4_copy.jpg" />
+                <p>
+                  <strong>Enrique Sutton</strong>
+                  <span>enriquesutton@gmail.com</span>
+                </p>
+                <div class="status inactive"></div>
+            </div>
+            
+            <div class="friend">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/5_copy.jpg" />
+                <p>
+                <strong>  Darnell Strickland</strong>
+                  <span>darnellstrickland@gmail.com</span>
+                </p>
+                <div class="status inactive"></div>
+            </div>
+            
+            <div id="search">
+              <input type="text" id="searchfield" value="Search contacts..." />
+            </div>
+            
+        </div>                
+        
+    </div>  
+    
+    <div id="chatview" class="p1">      
+        <div id="profile">
+
+            <div id="close">
+                <div class="cy"></div>
+                <div class="cx"></div>
+            </div>
+            
+            <p>Miro Badev</p>
+            <span>miro@badev@gmail.com</span>
+        </div>
+        <div id="chat-messages">
+          <label>Thursday 02</label>
+            
+            <div class="message">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1_copy.jpg" />
+                <div class="bubble">
+                  Really cool stuff!
+                    <div class="corner"></div>
+                    <span>3 min</span>
+                </div>
+            </div>
+            
+            <div class="message right">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/2_copy.jpg" />
+                <div class="bubble">
+                  Can you share a link for the tutorial?
+                    <div class="corner"></div>
+                    <span>1 min</span>
+                </div>
+            </div>
+            
+            <div class="message">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1_copy.jpg" />
+                <div class="bubble">
+                  Yeah, hold on
+                    <div class="corner"></div>
+                    <span>Now</span>
+                </div>
+            </div>
+            
+            <div class="message right">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/2_copy.jpg" />
+                <div class="bubble">
+                  Can you share a link for the tutorial?
+                    <div class="corner"></div>
+                    <span>1 min</span>
+                </div>
+            </div>
+            
+            <div class="message">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1_copy.jpg" />
+                <div class="bubble">
+                  Yeah, hold on
+                    <div class="corner"></div>
+                    <span>Now</span>
+                </div>
+            </div>
+            
+        </div>
+      
+        <div id="sendmessage">
+          <input type="text" value="Send message..." />
+            <button id="send"></button>
+        </div>
+    
+    </div>        
+</div>  
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        
+        <script src="./scripts/messages.js" async defer></script>
+    </body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       body {
+        background: #dfebed;
+        font-family: sans-serif;
+      }
+       a {
+        text-decoration: none;
+       }
+       li {
+        list-style: none;
+       }
+       .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: teal;
+        color: #fff;
+       }
+       .nav-links a {
+        color: #fff;
+       }
+       /* LOGO */
+       .logo {
+        font-size: 32px;
+       }
+       /* NAVBAR MENU */
+       .menu {
+        display: flex;
+        gap: 1em;
+        font-size: 18px;
+       }
+       .menu li:hover {
+        background-color: #4c9e9e;
+        border-radius: 5px;
+        transition: 0.3s ease;
+       }
+       .menu li {
+        padding: 5px 14px;
+       }
+       /* DROPDOWN MENU */
+       .messages {
+        position: relative; 
+       }
+       .dropdown {
+        background-color: rgb(1, 139, 139);
+        padding: 1em 0;
+        position: absolute; /*WITH RESPECT TO PARENT*/
+        display: none;
+        border-radius: 8px;
+        top: 35px;
+       }
+       .dropdown li + li {
+        margin-top: 10px;
+       }
+       .dropdown li {
+        padding: 0.5em 1em;
+        width: 8em;
+        text-align: center;
+       }
+       .dropdown li:hover {
+        background-color: #4c9e9e;
+       }
+       .messages:hover .dropdown {
+        display: block;
+       }
+</style>

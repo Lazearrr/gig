@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Homepage</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo">GIG</div>
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">      
+              <!-- NAVIGATION MENUS -->
+              <div class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li class="messages">
+                  <a href="messages.html">Messages</a>
+                  <!-- DROPDOWN MENU -->
+                  <ul class="dropdown">
+                    <li><a href="/">Jon: Hey got a job for you</a></li>
+                    <li><a href="/">Marc: Available Sunday?</a></li>
+                    <li><a href="/">Seth: Need a motor fixed</a></li>
+                    <li><a href="/">Sam: Need my computer fixed</a></li>
+                    <li><a href="/">Adam: Need a boat motor worked on</a></li>
+                  </ul>
+                </li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+              </div>
+            </ul>
+          </nav>
+            <select>
+              <div id="list1" class="dropdown-check-list1" tabindex="100">
+                <span class="anchor">Select Fruits</span>
+                <ul class="items">
+                  <li><input type="checkbox" />Apple </li>
+                  <li><input type="checkbox" />Orange</li>
+                  <li><input type="checkbox" />Grapes </li>
+                  <li><input type="checkbox" />Berry </li>
+                  <li><input type="checkbox" />Mango </li>
+                  <li><input type="checkbox" />Banana </li>
+                  <li><input type="checkbox" />Tomato</li>
+                </ul>
+              </div>
+              <div style="width: 100%; display: table;" id="list1" class="dropdown-check-list2" tabindex="100">
+                <span class="anchor">Select Fruits</span>
+                <ul class="items">
+                  <li><input type="checkbox" />Apple </li>
+                  <li><input type="checkbox" />Orange</li>
+                  <li><input type="checkbox" />Grapes </li>
+                  <li><input type="checkbox" />Berry </li>
+                  <li><input type="checkbox" />Mango </li>
+                  <li><input type="checkbox" />Banana </li>
+                  <li><input type="checkbox" />Tomato</li>
+                </ul>
+              </div>
+            </select>
+          <div id="googleMap" style="width:90%;height:500px;"></div>
+        <script>
+          const api_key = 'AIzaSyBw0pxi1p78osFBiAMDqNMYwQoWK1wxHCo'
+          function myMap() {
+            var mapProp= {
+              center:new google.maps.LatLng(51.508742,-0.120850),
+              zoom:5,
+            };
+            var map = new
+            google.maps.Map(document.getElementById("googleMap"),mapProp);
+          }
+        </script>
+ 
+        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBw0pxi1p78osFBiAMDqNMYwQoWK1wxHCo&callback=myMap'></script>
+        <script>
+          var checkList = document.getElementById('list1');
+          checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+          if (checkList.classList.contains('visible'))
+            checkList.classList.remove('visible');
+          else
+            checkList.classList.add('visible');
+}
+        </script>
+    </body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       body {
+        background: #dfebed;
+        font-family: sans-serif;
+      }
+       a {
+        text-decoration: none;
+       }
+       li {
+        list-style: none;
+       }
+       .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: teal;
+        color: #fff;
+       }
+       .nav-links a {
+        color: #fff;
+       }
+       /* LOGO */
+       .logo {
+        font-size: 32px;
+       }
+       /* NAVBAR MENU */
+       .menu {
+        display: flex;
+        gap: 1em;
+        font-size: 18px;
+       }
+       .menu li:hover {
+        background-color: #4c9e9e;
+        border-radius: 5px;
+        transition: 0.3s ease;
+       }
+       .menu li {
+        padding: 5px 14px;
+       }
+       /* DROPDOWN MENU */
+       .messages {
+        position: relative; 
+       }
+       .dropdown {
+        background-color: rgb(1, 139, 139);
+        padding: 1em 0;
+        position: absolute; /*WITH RESPECT TO PARENT*/
+        display: none;
+        border-radius: 8px;
+        top: 35px;
+       }
+       .dropdown li + li {
+        margin-top: 10px;
+       }
+       .dropdown li {
+        padding: 0.5em 1em;
+        width: 8em;
+        text-align: center;
+       }
+       .dropdown li:hover {
+        background-color: #4c9e9e;
+       }
+       .messages:hover .dropdown {
+        display: block;
+       }
+       #googleMap {
+         padding: 5em 5em;
+         margin: 20px;
+
+       }
+
+      .dropdown-check-list {
+        display: inline-block;
+      }
+      
+      .dropdown-check-list .anchor {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        padding: 5px 50px 5px 10px;
+        border: 1px solid #ccc;
+      }
+      
+      .dropdown-check-list .anchor:after {
+        position: absolute;
+        content: "";
+        border-left: 2px solid black;
+        border-top: 2px solid black;
+        padding: 5px;
+        right: 10px;
+        top: 20%;
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+      }
+      
+      .dropdown-check-list .anchor:active:after {
+        right: 8px;
+        top: 21%;
+      }
+      
+      .dropdown-check-list ul.items {
+        padding: 2px;
+        display: none;
+        margin: 0;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+      
+      .dropdown-check-list ul.items li {
+        list-style: none;
+      }
+      
+      .dropdown-check-list.visible .anchor {
+        color: #0094ff;
+      }
+      
+      .dropdown-check-list.visible .items {
+        display: block;
+      }
+</style>
